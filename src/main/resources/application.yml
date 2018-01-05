@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url : jdbc:mysql://localhost:3306/wx
+    username : root
+    password : root
+    driver-class-name : com.mysql.jdbc.Driver
+    
+mybatis:
+  type-aliases-package : cn.abble.wx.entity
