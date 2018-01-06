@@ -36,7 +36,7 @@ public class LoginController {
 			//如果没有插入数据
 			loginService.insertUser(map.get("openid"));
 		}
-		return "{\"msg\":\"登陆成功\"}";
+		return "{\"msg\":\""+map.get("openid")+"\"}";
 	}
 	
 	@RequestMapping(value="/sendUserInfo",method=RequestMethod.POST,produces="application/json;charset=utf-8")
