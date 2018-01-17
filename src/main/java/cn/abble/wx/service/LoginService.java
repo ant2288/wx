@@ -17,6 +17,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
  */
 
 import cn.abble.wx.entity.UserEntity;
+import cn.abble.wx.entity.UserInfoEntity;
 import cn.abble.wx.mapper.UserMapper;
 @Service
 public class LoginService {
@@ -38,6 +39,7 @@ public class LoginService {
 				sb.append(s);
 			}
 			ObjectMapper mapper = new ObjectMapper();
+			System.out.println(sb.toString());
 			map = mapper.readValue(sb.toString(), Map.class);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -62,5 +64,13 @@ public class LoginService {
 		UserEntity u = new UserEntity();
 		u.setOpenid(openid);
 		usermapper.insertUser(u);
+	}
+	
+	
+	/**
+	 * 更新用户头像与昵称
+	 */
+	public void updateAvatarUrlAndNickName(UserEntity u) {
+		usermapper.updateAvatarUrlAndNickName(u);
 	}
 }

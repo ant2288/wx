@@ -6,9 +6,9 @@ package cn.abble.wx.entity;
  */
 public class UserEntity {
 	private String openid;//用户唯一标识，主键
-	private String headImg;//头像url
+	private String avatarUrl;//头像url
 	private String tel;//电话号码
-	private String sex;//性别
+	private String gender;//性别
 	private String addr;//地址
 	private String nickName;//昵称
 	public String getOpenid() {
@@ -17,11 +17,11 @@ public class UserEntity {
 	public void setOpenid(String openid) {
 		this.openid = openid;
 	}
-	public String getHeadImg() {
-		return headImg;
+	public String getAvatarUrl() {
+		return avatarUrl;
 	}
-	public void setHeadImg(String headImg) {
-		this.headImg = headImg;
+	public void setAvatarUrl(String avatarUrl) {
+		this.avatarUrl = avatarUrl;
 	}
 	public String getTel() {
 		return tel;
@@ -30,10 +30,10 @@ public class UserEntity {
 		this.tel = tel;
 	}
 	public String getSex() {
-		return sex;
+		return gender;
 	}
-	public void setSex(String sex) {
-		this.sex = sex;
+	public void setSex(String gender) {
+		this.gender = gender;
 	}
 	public String getAddr() {
 		return addr;
